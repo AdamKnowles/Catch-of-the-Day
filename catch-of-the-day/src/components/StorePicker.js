@@ -4,8 +4,9 @@ export default class StorePicker extends Component {
     myInput = React.createRef()
     goToStore = (event) => {
         event.preventDefault();
-        console.log(this.myInput.current.value)
+        const storeName = this.myInput.current.value
         console.log("Go to Store")
+        this.props.history.push(`/store/${storeName}`)
     }
   render() {
     return (
